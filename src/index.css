@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: var(--color-gray-900);
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  input {
+    font-family: inherit;
+  }
+}
+
+@theme {
+  /* Colors */
+  --color-primary: #029185;
+  --color-secondary: #587e78;
+  --color-tertiary: #c36d4b;
+  --color-neutral: #f8fafc;
+  --color-border: #eee;
+  --color-white: #ffffff;
+
+  --color-primary-deep: #00796b;
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Backgrounds */
+  --background-image-primary-btn: linear-gradient(
+    135deg,
+    #029185 0%,
+    #03a597 100%
+  );
+  --background-image-hero-gradient: linear-gradient(
+    180deg,
+    rgba(2, 145, 133, 0.82) 0%,
+    rgba(88, 126, 120, 0.75) 30%,
+    rgba(2, 145, 133, 0.88) 100%
+  );
+
+  /* Animations */
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-4px);
+    }
+
+    75% {
+      transform: translateX(4px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .thick-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .thick-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 36px;
+    height: 3px;
+    background-color: var(--color-primary-deep);
+    border-radius: 2px;
+  }
+}
