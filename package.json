@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:staging": "tsc -b && vite build --mode staging",
     "build:prod": "tsc -b && vite build --mode production",
-    "preview": "vite preview"
+    "preview": "preview": "vite preview --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
