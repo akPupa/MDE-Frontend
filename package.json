@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:staging": "tsc -b && vite build --mode staging",
-    "build:prod": "tsc -b && vite build --mode production",
-    "preview": "preview": "vite preview --host 0.0.0.0 --port $PORT"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "build:staging": "vite build --mode staging",
+  "build:prod": "vite build --mode production",
+  "preview": "vite preview --host 0.0.0.0 --port $PORT"
+}
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
